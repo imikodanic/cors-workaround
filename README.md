@@ -1,28 +1,19 @@
-# Adonis API application
+# CORS Workaround API
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+This is a NodeJs API with which you can send API calls to any URL
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+## Request example
 
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick --api-only
 ```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+{
+	"method": "GET",
+	"url": "https://somewebsiteapi/login",
+	"headers": {
+		"Authorization": "JWT Token"
+	},
+	"data": {
+		"firstName": "Ivann"
+		"lastname": "Mikodanic"
+	}
+}
 ```
