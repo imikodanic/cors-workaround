@@ -12,7 +12,8 @@ class ApiController {
         for (let [key, value] of Object.entries(apiParams.headers)) {
             apiCall.setRequestHeader(key, value);
         }
-
+        apiCall.setRequestHeader('Access-Control-Allow-Origin', '*');
+        apiCall.setRequestHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
         apiCall.onreadystatechange = function() {
             if (this.readyState === 4) {
                 apiResponse = JSON.parse(apiCall.responseText)
